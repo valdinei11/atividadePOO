@@ -1,5 +1,4 @@
 <?php
-
 class Passageiro {
     public $nome, $pernas, $peso;
 
