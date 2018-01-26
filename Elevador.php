@@ -1,6 +1,7 @@
 <?php
 class Elevador {
-    public $pesoMax, $passMax, $pernMax, $qtdAnd, $qtdPass=0, $andarAtual;
+    public $pesoMax, $passMax, $pernMax, $qtdAnd;
+    public $andarAtual, $pesoAtual=0, $pernAtual=0, $qtdPass=0;
 
     public function __construct($pesoMax, $passMax, $pernMax, $qtdPass, $qtdAnd, $andarAtual) {
         $this->pesoMax = $pesoMax;
@@ -11,8 +12,10 @@ class Elevador {
         $this->andarAtual = $andarAtual;
     }
 
-    public function addPassageiro($pass) {
+    public function addPassageiro(Passageiro $pass) {
         $qtdPass++;
+        $pernAtual += $pass->pernas;
+        $pesoAtual += $pass->peso;
     }
 
     public function delPassageiro() {

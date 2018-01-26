@@ -7,4 +7,7 @@ require_once('Animal.php');
 $elev1 = new Elevador(420, 6, 12, 0, 11, 0);
 $pass1 = new Pessoa("Elias Anderson", 2, 50);
 
-$elev1->addPassageiro();
+$elev1->addPassageiro($pass1);
+
+var_dump($elev1);
+var_dump($pass1);
