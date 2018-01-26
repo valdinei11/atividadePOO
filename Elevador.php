@@ -12,10 +12,10 @@ class Elevador {
         $this->andarAtual = $andarAtual;
     }
 
-    public function addPassageiro(Passageiro $pass) {
-        $qtdPass++;
-        $pernAtual += $pass->pernas;
-        $pesoAtual += $pass->peso;
+    public function addPassageiro($pass) {
+        $this->qtdPass += 1;
+        $this->$pernAtual += $pass->pernas;
+        $this->$pesoAtual += $pass->peso;
     }
 
     public function delPassageiro() {

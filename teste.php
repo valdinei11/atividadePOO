@@ -10,4 +10,5 @@ $pass1 = new Pessoa("Elias Anderson", 2, 50);
 $elev1->addPassageiro($pass1);
 
 var_dump($elev1);
+echo "<br>";
 var_dump($pass1);
